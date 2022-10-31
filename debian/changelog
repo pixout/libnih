@@ -1,3 +1,77 @@
+libnih (1.0.3-4ubuntu27) vivid; urgency=medium
+
+  * No change rebuild to get debug symbols on all architectures.
+
+ -- Brian Murray <brian@ubuntu.com>  Mon, 17 Nov 2014 09:04:22 -0800
+
+libnih (1.0.3-4ubuntu26) utopic; urgency=medium
+
+  [ Dimitri John Ledkov ]
+  * Remove versioned libc6-dev build-dependencies, any recent one will do.
+  
+  [ James Hunt ]
+  * Fix crash in test_output, print_last by avoiding passing NULL to
+    atoi(3).
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Sun, 04 May 2014 00:53:42 +0100
+
+libnih (1.0.3-4ubuntu25) trusty; urgency=low
+
+  [ Dmitrijs Ledkovs ]
+  * libnih-dbus should depend on dbus-1, in debian/control -dev package
+    and pkgconfig file.
+  * Add :native build-dependencies, now that the archive supports them,
+    thus making libnih cross-buildable by dpkg tools.
+  * wrap-and-sort debian/control.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Thu, 13 Feb 2014 21:03:48 +0000
+
+libnih (1.0.3-4ubuntu24) trusty; urgency=low
+
+  * Do not blindly use passed pointer to the TEST_FUNCTION (et.al),
+    instead make a strncpy of it. Since passed pointer can be freed behind
+    our back, when we still need it.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Tue, 12 Nov 2013 13:20:50 +0000
+
+libnih (1.0.3-4ubuntu23) trusty; urgency=low
+
+  * Split test_node.c into two translation units. (LP: #1248677)
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Mon, 11 Nov 2013 00:17:41 +0000
+
+libnih (1.0.3-4ubuntu22) trusty; urgency=low
+
+  * Update TAP output patch to latest.
+  * Disable parallel running of test-suite, not deterministic.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Sat, 09 Nov 2013 23:33:39 +0000
+
+libnih (1.0.3-4ubuntu20) trusty; urgency=low
+
+  * Add autopkgtest to run full testsuite.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Thu, 07 Nov 2013 14:03:08 +0000
+
+libnih (1.0.3-4ubuntu19) trusty; urgency=low
+
+  * Fix TEST_FUNCTION_FEATURE formatting.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Thu, 07 Nov 2013 04:01:12 +0000
+
+libnih (1.0.3-4ubuntu18) trusty; urgency=low
+
+  * Optimise TAP compatible test-suite, generated out of range conditional
+    branches on arm*, but not any other platforms.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Thu, 07 Nov 2013 00:18:03 +0000
+
+libnih (1.0.3-4ubuntu17) trusty; urgency=low
+
+  * Apply patch to generate TAP compatible test-suite output.
+
+ -- Dmitrijs Ledkovs <xnox@ubuntu.com>  Wed, 06 Nov 2013 17:37:27 +0000
+
 libnih (1.0.3-4ubuntu16) raring; urgency=low
 
   * debian/{libnih1.postinst,libnih-dbus1.postinst}: Force an upgrade to

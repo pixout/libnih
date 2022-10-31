@@ -1,3 +1,8 @@
+2014-04-25  James Hunt  <james.hunt@ubuntu.com>
+
+	* nih/test_output.h: print_last(): Check variable to avoid
+	  passing NULL to atoi(3).  
+
 2013-03-13  Steve Langasek  <steve.langasek@ubuntu.com>
 
 	* nih/watch.c (nih_watch_walk_filter): New NihFileFilter function
